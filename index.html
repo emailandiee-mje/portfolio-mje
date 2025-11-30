@@ -3,1128 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio showcasing expertise in dashboard creation, business intelligence, and data reporting with a passion for inclusive design.">
-    <meta name="keywords" content="dashboard design, business intelligence, data reporting, analytics, BI">
-    <meta name="author" content="Portfolio Creator">
+    <meta name="description" content="Technical Operations Leader & Analytics Engineer building serverless data infrastructure.">
+    <title>Miranda Jane Ellison | Analytics Engineer</title>
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Dashboard & Business Intelligence Portfolio">
-    <meta property="og:description" content="Showcasing expertise in creating impactful dashboards and business reporting solutions.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.com/emailandiee-mje/portfolio-mje.git">
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <title>Dashboard & BI Portfolio - Professional Analytics Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Animated Background Mesh */
+        .bg-mesh {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(at 40% 20%, hsla(260,100%,70%,0.2) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(189,100%,56%,0.2) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(340,100%,76%,0.2) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, hsla(260,100%,70%,0.2) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(22,100%,77%,0.2) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(242,100%,70%,0.2) 0px, transparent 50%),
+                radial-gradient(at 0% 0%, hsla(343,100%,76%,0.2) 0px, transparent 50%);
+            background-attachment: fixed;
         }
 
-        :root {
-            --primary: #1F2937;
-            --secondary: #2563EB;
-            --accent-red: #EF4444;
-            --accent-orange: #F97316;
-            --accent-yellow: #FBBF24;
-            --accent-green: #10B981;
-            --accent-blue: #3B82F6;
-            --accent-purple: #8B5CF6;
-            --accent-pink: #EC4899;
-            --light-bg: #F9FAFB;
-            --border: #E5E7EB;
-            --text-primary: #111827;
-            --text-secondary: #6B7280;
-            --success: #10B981;
-            --white: #FFFFFF;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Glassmorphism Card Style */
+        .glass {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
         }
 
-        html {
-            scroll-behavior: smooth;
+        /* Hover Effect */
+        .glass-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-hover:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.12);
+            border-color: rgba(255, 255, 255, 0.8);
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-            color: var(--text-primary);
-            background: var(--white);
-            line-height: 1.6;
-        }
-
-        /* ==================== NAVIGATION ==================== */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .nav-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent-purple) 100%);
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #4F46E5 0%, #EC4899 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
-            transition: var(--transition);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent-red), var(--accent-pink), var(--accent-purple));
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .pride-indicator {
-            display: flex;
-            gap: 2px;
-            height: 4px;
-            margin-left: 1rem;
-        }
-
-        .pride-indicator span {
-            height: 100%;
-            flex: 1;
-        }
-
-        /* ==================== HERO SECTION ==================== */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: var(--white);
-            padding: 6rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            line-height: 1.2;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.75rem 2rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: var(--secondary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--secondary);
-            border: 2px solid var(--white);
-        }
-
-        .btn-secondary:hover {
-            background: transparent;
-            color: var(--white);
-            transform: translateY(-2px);
-        }
-
-        /* ==================== SECTIONS ==================== */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 3rem;
-            max-width: 600px;
-        }
-
-        /* ==================== EXPERTISE SECTION ==================== */
-        .expertise {
-            background: var(--light-bg);
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .expertise-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 1rem;
-            border-left: 4px solid var(--secondary);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .expertise-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        .expertise-card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        .icon-placeholder {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* ==================== PROJECTS SECTION ==================== */
-        .projects {
-            background: var(--white);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: var(--white);
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            border: 1px solid var(--border);
-        }
-
-        .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .project-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 3rem;
-        }
-
-        .project-card:nth-child(2) .project-header {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .project-card:nth-child(3) .project-header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .project-card:nth-child(4) .project-header {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-        }
-
-        .project-content {
-            padding: 2rem;
-        }
-
-        .project-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        .project-type {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent-red), var(--accent-pink), var(--accent-purple));
-            color: var(--white);
-            padding: 0.25rem 0.75rem;
-            border-radius: 2rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-
-        .project-description {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .project-stats {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1rem 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .stat {
-            flex: 1;
-        }
-
-        .stat-value {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--secondary);
-        }
-
-        .stat-label {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .tech-stack {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-badge {
-            background: var(--light-bg);
-            color: var(--secondary);
-            padding: 0.35rem 0.75rem;
-            border-radius: 0.25rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .project-link {
-            display: inline-block;
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
-            border: 2px solid var(--secondary);
-        }
-
-        .project-link:hover {
-            background: var(--secondary);
-            color: var(--white);
-        }
-
-        /* ==================== VALUES SECTION ==================== */
-        .values {
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.05) 0%, rgba(138, 43, 226, 0.05) 100%);
-        }
-
-        .values-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .values-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .values-text h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .values-text p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        .values-list {
-            list-style: none;
-        }
-
-        .values-list li {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        .values-list li::before {
-            content: '→';
-            font-size: 1.5rem;
-            background: linear-gradient(135deg, var(--accent-red), var(--accent-pink), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-        }
-
-        .pride-visual {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 0.5rem;
-            height: 300px;
-        }
-
-        .pride-stripe {
-            border-radius: 0.5rem;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-        }
-
-        .pride-stripe:hover {
-            transform: scaleY(1.1);
-        }
-
-        .pride-stripe:nth-child(1) { background: #EF4444; }
-        .pride-stripe:nth-child(2) { background: #F97316; }
-        .pride-stripe:nth-child(3) { background: #FBBF24; }
-        .pride-stripe:nth-child(4) { background: #10B981; }
-        .pride-stripe:nth-child(5) { background: #3B82F6; }
-        .pride-stripe:nth-child(6) { background: #8B5CF6; }
-        .pride-stripe:nth-child(7) { background: #EC4899; }
-
-        /* ==================== SKILLS SECTION ==================== */
-        .skills {
-            background: var(--light-bg);
-        }
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-category {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .skill-category h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 0.5rem;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 0.5rem 0;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-list li::before {
-            content: '✓';
-            color: var(--success);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* ==================== FOOTER ==================== */
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--white);
-            text-decoration: none;
-            transition: var(--transition);
-            opacity: 0.8;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            text-decoration: none;
-            transition: var(--transition);
-            font-weight: bold;
-        }
-
-        .social-link:hover {
-            background: linear-gradient(135deg, var(--accent-red), var(--accent-pink), var(--accent-purple));
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .pride-footer {
-            display: flex;
-            justify-content: center;
-            gap: 2px;
-            margin-bottom: 1.5rem;
-            height: 3px;
-        }
-
-        .pride-footer span {
-            flex: 1;
-            border-radius: 2px;
-        }
-
-        /* ==================== ANIMATIONS ==================== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .gradient-animate {
-            background-size: 200% 200%;
-            animation: gradientShift 6s ease infinite;
-        }
-
-        /* ==================== RESPONSIVE ==================== */
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .hero {
-                padding: 4rem 1rem;
-            }
-
-            section {
-                padding: 3rem 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .expertise-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .values-content {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-links {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .hero-h1 {
-                font-size: 2rem;
-            }
-        }
-
-        /* ==================== ACCESSIBILITY ==================== */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-
-        /* Focus styles for keyboard navigation */
-        a:focus-visible,
-        button:focus-visible {
-            outline: 3px solid var(--secondary);
-            outline-offset: 2px;
         }
     </style>
 </head>
-<body>
-    <!-- ==================== NAVIGATION ==================== -->
-    <nav>
-        <div class="nav-container">
-            <div class="nav-brand">Miranda Jane Ellison</div>
-            <ul class="nav-links">
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#values">Values</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-            <div class="pride-indicator">
-                <span style="background: #EF4444;"></span>
-                <span style="background: #F97316;"></span>
-                <span style="background: #FBBF24;"></span>
-                <span style="background: #10B981;"></span>
-                <span style="background: #3B82F6;"></span>
-                <span style="background: #8B5CF6;"></span>
-                <span style="background: #EC4899;"></span>
-            </div>
-        </div>
-    </nav>
+<body class="bg-mesh text-slate-800 min-h-screen p-4 md:p-8 lg:p-12">
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero">
-        <div class="hero-content fade-in-up">
-            <h1>Dashboard & Business Intelligence Expertise</h1>
-            <p class="hero-subtitle">Transforming Data into Actionable Insights Through Thoughtful Design</p>
-            <div class="hero-cta">
-                <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View Projects</button>
-                <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
-            </div>
-        </div>
-    </section>
+    <div class="max-w-7xl mx-auto">
 
-    <!-- ==================== EXPERTISE SECTION ==================== -->
-    <section id="expertise" class="expertise">
-        <div class="container fade-in-up">
-            <h2 class="section-title">Core Expertise</h2>
-            <p class="section-subtitle">Specializing in creating meaningful data experiences that drive business value</p>
-            
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="icon-placeholder">📊</div>
-                    <h3>Dashboard Design</h3>
-                    <p>Creating intuitive, visually compelling dashboards that translate complex data into clear, actionable insights for stakeholders at all levels.</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6 auto-rows-[minmax(180px,auto)]">
+
+            <div class="glass glass-hover rounded-3xl col-span-1 md:col-span-2 lg:col-span-2 p-8 flex flex-col justify-center relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i class="fa-solid fa-code text-9xl text-indigo-500"></i>
                 </div>
-
-                <div class="expertise-card">
-                    <div class="icon-placeholder">📈</div>
-                    <h3>Business Intelligence</h3>
-                    <p>Building comprehensive BI solutions that leverage data modeling, ETL processes, and advanced analytics to support strategic decision-making.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="icon-placeholder">🎨</div>
-                    <h3>Data Visualization</h3>
-                    <p>Transforming raw data into compelling visual narratives using industry-leading tools and design principles for maximum impact and clarity.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="icon-placeholder">⚙️</div>
-                    <h3>Report Automation</h3>
-                    <p>Designing and implementing automated reporting solutions that save time, reduce errors, and ensure consistent, timely data delivery.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="icon-placeholder">🔍</div>
-                    <h3>Analytics Implementation</h3>
-                    <p>End-to-end analytics solutions from data collection strategy through implementation, ensuring robust infrastructure for data-driven insights.</p>
-                </div>
-
-                <div class="expertise-card">
-                    <div class="icon-placeholder">👥</div>
-                    <h3>Stakeholder Communication</h3>
-                    <p>Translating technical concepts into compelling narratives that resonate with business leaders and drive organizational alignment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== PROJECTS SECTION ==================== -->
-    <section id="projects" class="projects">
-        <div class="container fade-in-up">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Showcasing impactful dashboard and reporting solutions</p>
-            
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-header">📊</div>
-                    <div class="project-content">
-                        <span class="project-type">Dashboard</span>
-                        <h3 class="project-title">Executive Sales Dashboard</h3>
-                        <p class="project-description">Multi-region sales performance tracking and KPI monitoring system enabling real-time decision making across organizational units.</p>
-                        
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">75%</div>
-                                <div class="stat-label">Time Saved</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">5M+</div>
-                                <div class="stat-label">Rows Handled</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">3mo</div>
-                                <div class="stat-label">Duration</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-stack">
-                            <span class="tech-badge">Power BI</span>
-                            <span class="tech-badge">SQL</span>
-                            <span class="tech-badge">DAX</span>
-                        </div>
-
-                        <a href="#" class="project-link">View Details →</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-header">📈</div>
-                    <div class="project-content">
-                        <span class="project-type">Reporting</span>
-                        <h3 class="project-title">Automated Reporting Suite</h3>
-                        <p class="project-description">Enterprise-scale automated reporting system delivering daily, weekly, and monthly reports to 200+ stakeholders with zero manual intervention.</p>
-                        
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">200+</div>
-                                <div class="stat-label">Stakeholders</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">40hrs</div>
-                                <div class="stat-label">Saved/Week</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">99.8%</div>
-                                <div class="stat-label">Uptime</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-stack">
-                            <span class="tech-badge">Tableau</span>
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Automation</span>
-                        </div>
-
-                        <a href="#" class="project-link">View Details →</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-header">⚡</div>
-                    <div class="project-content">
-                        <span class="project-type">Real-time</span>
-                        <h3 class="project-title">Real-Time Monitoring Dashboard</h3>
-                        <p class="project-description">Live operations dashboard providing second-by-second visibility into critical business metrics with instant alerting for anomalies.</p>
-                        
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">Real-time</div>
-                                <div class="stat-label">Updates</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">100%</div>
-                                <div class="stat-label">Accuracy</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">24/7</div>
-                                <div class="stat-label">Monitoring</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-stack">
-                            <span class="tech-badge">Looker</span>
-                            <span class="tech-badge">BigQuery</span>
-                            <span class="tech-badge">APIs</span>
-                        </div>
-
-                        <a href="#" class="project-link">View Details →</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-header">🎯</div>
-                    <div class="project-content">
-                        <span class="project-type">Analytics</span>
-                        <h3 class="project-title">Customer Analytics Platform</h3>
-                        <p class="project-description">Comprehensive customer intelligence platform enabling segmentation, behavior analysis, and predictive modeling for targeted strategies.</p>
-                        
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-value">500K+</div>
-                                <div class="stat-label">Records</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">25+</div>
-                                <div class="stat-label">Dimensions</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">6mo</div>
-                                <div class="stat-label">Duration</div>
-                            </div>
-                        </div>
-
-                        <div class="tech-stack">
-                            <span class="tech-badge">R</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">Visualization</span>
-                        </div>
-
-                        <a href="#" class="project-link">View Details →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== VALUES SECTION ==================== -->
-    <section id="values" class="values">
-        <div class="container">
-            <h2 class="section-title">Beyond the Data</h2>
-            <p class="section-subtitle">Commitment to inclusive design and community values</p>
-            
-            <div class="values-content fade-in-up">
-                <div class="values-text">
-                    <h3>Passionate About Community</h3>
-                    <p>My work in data and analytics is driven by more than just metrics and dashboards. I'm deeply committed to supporting the LGBT+ community and fostering inclusive, welcoming spaces in tech.</p>
-                    <p>I believe that great data work comes from diverse perspectives and teams. I actively support workplace equality, champion inclusive design practices, and mentor the next generation of diverse tech talent.</p>
+                <div class="relative z-10">
+                    <span class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-indigo-500 uppercase bg-indigo-50 rounded-full border border-indigo-100">
+                        Available for Hire
+                    </span>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+                        Miranda J. Ellison
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-light text-slate-600 mb-6">
+                        Technical Operations Leader & Analytics Engineer
+                    </h2>
+                    <p class="text-slate-500 max-w-lg leading-relaxed">
+                        I build serverless data infrastructure that turns messy operational noise into clear business signals. 20+ years in Operations transformed into Full-Stack Engineering.
+                    </p>
                     
-                    <ul class="values-list">
-                        <li>Workplace equality advocate</li>
-                        <li>Inclusive design champion</li>
-                        <li>LGBTQ+ community supporter</li>
-                        <li>Diversity in tech promoter</li>
-                        <li>Mentoring underrepresented groups</li>
-                    </ul>
+                    <div class="flex gap-4 mt-8">
+                        <a href="https://github.com/emailandiee-mje" target="_blank" class="p-3 bg-white rounded-full shadow-sm hover:text-indigo-600 transition-colors">
+                            <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/miranda-j-ellison/" target="_blank" class="p-3 bg-white rounded-full shadow-sm hover:text-indigo-600 transition-colors">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="mailto:mirandaellison69@gmail.com" class="p-3 bg-white rounded-full shadow-sm hover:text-indigo-600 transition-colors">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-                    <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.8;">
-                        ✌️ Proud supporter of HRC, Lambda Legal, GLSEN, and organizations advancing equality.
+            <div class="glass glass-hover rounded-3xl col-span-1 md:col-span-1 row-span-2 p-6">
+                <h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-indigo-500"></i> Tech Stack
+                </h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Engineering</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">GCP BigQuery</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">SQL (Advanced)</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">SCD Type 2</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">ETL Pipelines</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Full Stack</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">Apps Script</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">HTML5</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Operations</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">Agile</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">Lean Six Sigma</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-sm font-medium shadow-sm">Process Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass glass-hover rounded-3xl col-span-1 p-6 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500"></div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Beyond Code</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        I believe great data work comes from diverse perspectives. Committed to inclusive design & supporting the LGBTQ+ tech community.
                     </p>
                 </div>
-
-                <div class="pride-visual">
-                    <div class="pride-stripe"></div>
-                    <div class="pride-stripe"></div>
-                    <div class="pride-stripe"></div>
-                    <div class="pride-stripe"></div>
-                    <div class="pride-stripe"></div>
-                    <div class="pride-stripe"></div>
-                    <div class="pride-stripe"></div>
+                <div class="mt-4 flex gap-2">
+                    <span class="text-2xl" title="Inclusive">🏳️‍🌈</span>
+                    <span class="text-2xl" title="Diverse">🏳️‍⚧️</span>
+                    <span class="text-2xl" title="Supportive">🤝</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ==================== SKILLS SECTION ==================== -->
-    <section id="skills" class="skills">
-        <div class="container fade-in-up">
-            <h2 class="section-title">Technical Skills</h2>
-            <p class="section-subtitle">Tools and technologies mastered across the analytics spectrum</p>
-            
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h4>BI & Reporting Tools</h4>
-                    <ul class="skill-list">
-                        <li>Power BI</li>
-                        <li>Tableau</li>
-                        <li>Looker</li>
-                        <li>Qlik Sense</li>
-                        <li>Google Analytics</li>
-                    </ul>
+            <div class="glass glass-hover rounded-3xl col-span-1 md:col-span-3 lg:col-span-3 row-span-2 p-0 overflow-hidden flex flex-col md:flex-row">
+                
+                <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded uppercase">New Case Study</span>
+                        <span class="text-slate-400 text-xs">Featured Project</span>
+                    </div>
+                    
+                    <h3 class="text-3xl font-bold mb-4 text-slate-800">RetailOps ERP & Intelligence Engine</h3>
+                    
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        A full-stack ecosystem replacing legacy paper workflows. I vibe-coded a <strong>Tailwind + Apps Script</strong> web app for data entry, architected a <strong>BigQuery ETL</strong> pipeline, and engineered a "Time Machine" SQL model to track historical revenue against inflation.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white/50 p-3 rounded-xl">
+                            <div class="text-2xl font-bold text-indigo-600">100%</div>
+                            <div class="text-xs text-slate-500 uppercase font-bold">Paperless</div>
+                        </div>
+                        <div class="bg-white/50 p-3 rounded-xl">
+                            <div class="text-2xl font-bold text-pink-600">Daily</div>
+                            <div class="text-xs text-slate-500 uppercase font-bold">Auto-Reporting</div>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/emailandiee-mje/retail-ops-gcp-pipeline" class="inline-flex items-center gap-2 text-indigo-600 font-bold hover:gap-3 transition-all">
+                        View Case Study <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <div class="skill-category">
-                    <h4>Databases & Querying</h4>
-                    <ul class="skill-list">
-                        <li>SQL (Advanced)</li>
-                        <li>PostgreSQL</li>
-                        <li>MySQL</li>
-                        <li>BigQuery</li>
-                        <li>Data Warehousing</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h4>Programming & Scripting</h4>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>R</li>
-                        <li>DAX/M Language</li>
-                        <li>JavaScript</li>
-                        <li>Scripting Automation</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h4>Data & ETL</h4>
-                    <ul class="skill-list">
-                        <li>ETL Pipeline Design</li>
-                        <li>Data Modeling</li>
-                        <li>Data Warehousing</li>
-                        <li>Apache Airflow</li>
-                        <li>Integration Services</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h4>Design & UX</h4>
-                    <ul class="skill-list">
-                        <li>Data Visualization</li>
-                        <li>UX/UI Principles</li>
-                        <li>Color Theory</li>
-                        <li>Accessibility (WCAG)</li>
-                        <li>User Research</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h4>Soft Skills</h4>
-                    <ul class="skill-list">
-                        <li>Stakeholder Management</li>
-                        <li>Technical Documentation</li>
-                        <li>Presentation Skills</li>
-                        <li>Project Leadership</li>
-                        <li>Cross-functional Collaboration</li>
-                    </ul>
+                <div class="md:w-1/2 bg-slate-100 relative min-h-[300px]">
+                    <img src="assets/dashboard_mockup.png" 
+                         alt="RetailOps Dashboard" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-90 grayscale hover:grayscale-0 transition-all duration-500"
+                         style="object-position: top left;">
+                    
+                    <div class="absolute bottom-4 left-4 bg-black/80 backdrop-blur text-white text-xs px-3 py-1.5 rounded-lg border border-white/20">
+                        <i class="fa-solid fa-print mr-1"></i> Print-Optimized UI
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="pride-footer">
-                <span style="background: #EF4444;"></span>
-                <span style="background: #F97316;"></span>
-                <span style="background: #FBBF24;"></span>
-                <span style="background: #10B981;"></span>
-                <span style="background: #3B82F6;"></span>
-                <span style="background: #8B5CF6;"></span>
-                <span style="background: #EC4899;"></span>
-            </div>
-
-            <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Let's Create Something Amazing</h2>
-            <p style="opacity: 0.9; margin-bottom: 2rem; font-size: 1.1rem;">
-                Interested in discussing your dashboard or reporting needs? I'd love to connect.
-            </p>
-
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/miranda-j-ellison/" class="social-link" title="LinkedIn">in</a>
-                <a href="https://github.com/emailandiee-mje/portfolio-mje.git" class="social-link" title="GitHub">gh</a>
-                <a href="mirandaellison69@gmail.com" class="social-link" title="Email">@</a>
-                <a href="https://twitter.com" class="social-link" title="Twitter">𝕏</a>
-            </div>
-
-            <div class="footer-links">
-                <a href="#expertise">Expertise</a>
-                <a href="#projects">Projects</a>
-                <a href="#values">Values</a>
-                <a href="#skills">Skills</a>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2025 Dashboard & BI Portfolio. Crafted with care and inclusive design principles.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.85rem;">
-                    🌈 Proudly supporting LGBT+ communities and diversity in tech
+            <div class="glass glass-hover rounded-3xl col-span-1 p-6 flex flex-col">
+                <div class="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-blue-600">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h4 class="font-bold text-lg mb-2">Executive Sales Dash</h4>
+                <p class="text-sm text-slate-500 mb-4 flex-grow">
+                    Multi-region KPI monitoring system built in Power BI handling 5M+ rows.
                 </p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-white px-2 py-1 rounded shadow-sm">Power BI</span>
+                    <span class="text-xs bg-white px-2 py-1 rounded shadow-sm">DAX</span>
+                </div>
             </div>
+
+            <div class="glass glass-hover rounded-3xl col-span-1 md:col-span-4 p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="text-2xl font-bold mb-1">Let's build something real.</h3>
+                    <p class="text-slate-500">Currently exploring new opportunities in Analytics Engineering.</p>
+                </div>
+                <div>
+                    <a href="mailto:mirandaellison69@gmail.com" class="px-8 py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-indigo-600 transition-colors shadow-lg shadow-indigo-200">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+
+        </div> <div class="text-center mt-12 mb-6 text-slate-400 text-sm">
+            <p>© 2025 Miranda Jane Ellison. Built with Tailwind CSS & Pride. 🏳️‍🌈</p>
         </div>
-    </footer>
 
-    <script>
-        // Smooth scroll behavior for older browsers
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+    </div>
 
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.expertise-card, .project-card, .skill-category').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>
